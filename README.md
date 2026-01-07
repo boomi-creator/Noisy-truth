@@ -58,7 +58,7 @@
   - control sigma point spread
   - compute weights
 
-You **do not change these inside the algorithm**.
+
 
 ---
 
@@ -114,7 +114,7 @@ What it does (in order):
    - `self.p`
    - `self.sigmas`
 
-This step **does not use measurements**.
+
 
 ---
 
