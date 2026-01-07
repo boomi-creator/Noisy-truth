@@ -99,6 +99,23 @@ This function is called:
 
 ---
 
+## Measurement update step
+
+### `update(states, data, r_matrix)`
+
+What it does (in order):
+
+1. Extracts measured components from sigma points
+2. Computes predicted measurement mean
+3. Computes measurement covariance
+4. Computes cross covariance
+5. Computes Kalman gain
+6. Updates:
+   - `self.x`
+   - `self.p`
+   - `self.sigmas`
+
+
 ##  Prediction step
 
 ### `predict(timestep, inputs)`
@@ -123,3 +140,5 @@ What it does (in order):
 - Called as:
   ```python
   iterate(state, timestep, inputs)
+- Returns the predicted next state
+
